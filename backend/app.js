@@ -6,6 +6,8 @@ import { fileURLToPath } from 'url';
 import userRoute from './routes/userRoute.js';
 import otpRoute from './routes/otpRoute.js';
 import productRoute from './routes/productRoute.js';
+import cartRoute from './routes/cartRoute.js';
+import orderRoute from './routes/orderRoute.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -21,6 +23,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/auth', userRoute);
 app.use('/otp', otpRoute);
 app.use('/products', productRoute);
+app.use('/cart', cartRoute);
+app.use('/orders', orderRoute);
 
 try {
     const port = 3000;
