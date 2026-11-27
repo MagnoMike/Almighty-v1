@@ -8,6 +8,8 @@ import Orders from './pages/Orders.jsx'
 import AdminOrders from './pages/AdminOrders.jsx'
 import AdminOverview from './pages/AdminOverview.jsx'
 import AdminProducts from './pages/AdminProducts.jsx'
+import AdminPayroll from './pages/AdminPayroll.jsx'
+import AdminRiders from './pages/AdminRiders.jsx'
 import RiderToday from './pages/RiderToday.jsx'
 import RiderDeliveries from './pages/RiderDeliveries.jsx'
 import RiderHistory from './pages/RiderHistory.jsx'
@@ -34,6 +36,8 @@ export default function App() {
         <Route path="/admin" element={<PrivateRoute role="admin"><AdminOverview /></PrivateRoute>} />
         <Route path="/admin/orders" element={<PrivateRoute role="admin"><AdminOrders /></PrivateRoute>} />
         <Route path="/admin/products" element={<PrivateRoute role="admin"><AdminProducts /></PrivateRoute>} />
+        <Route path="/admin/riders" element={<PrivateRoute role="admin"><AdminRiders /></PrivateRoute>} />
+        <Route path="/admin/payroll" element={<PrivateRoute role="admin"><AdminPayroll /></PrivateRoute>} />
         <Route path="/rider" element={<PrivateRoute role="delivery"><RiderToday /></PrivateRoute>} />
         <Route path="/rider/deliveries" element={<PrivateRoute role="delivery"><RiderDeliveries /></PrivateRoute>} />
         <Route path="/rider/history" element={<PrivateRoute role="delivery"><RiderHistory /></PrivateRoute>} />

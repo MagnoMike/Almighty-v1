@@ -8,6 +8,7 @@ import otpRoute from './routes/otpRoute.js';
 import productRoute from './routes/productRoute.js';
 import cartRoute from './routes/cartRoute.js';
 import orderRoute from './routes/orderRoute.js';
+import attendanceRoute from './routes/attendanceRoute.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -25,6 +26,7 @@ app.use('/otp', otpRoute);
 app.use('/products', productRoute);
 app.use('/cart', cartRoute);
 app.use('/orders', orderRoute);
+app.use('/attendance', attendanceRoute);
 
 try {
     const port = 3000;
