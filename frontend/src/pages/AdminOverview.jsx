@@ -67,7 +67,7 @@ export default function AdminOverview() {
   const newOrders = orders.filter(o => o.status === 'new').length
   const lowStock = products.filter(p => p.stock <= 10).length
   const recentOrders = orders.slice(0, 5)
-
+/// Fixing Bug Again
   return (
     <div className="layout">
 
